@@ -9,64 +9,61 @@ input{color: gray;padding: 5px;}
 </style>
 <script type="text/javascript">
 function memId(){
-	var id="";
 	id=document.getElementById("memId").value;
 	if(id==""){
-		return true;
-	}
-	else{
 		return false;
 	}
+	else{
+		return true;
+	}
 }
-
-
 function chk(){
-	var pw;
-	var chkpw;
 	
 	pw=document.getElementById("memPw").value;
 	chkpw=document.getElementById("chkPw").value;
 	
-	if(pw===chkpw){
-		document.getElementById("cmd").innerHTML="확인!!";
-		return false;
-		
-	}else{
+	if(!pw||!chkpw){
+		document.getElementById("cmd").innerHTML="";
+		return true;		
+	}else if(pw===chkpw){
+		document.getElementById("cmd").innerHTML="확인";	
+	}
+	
+	else{
 		document.getElementById("memPw").value="";
 		document.getElementById("chkPw").value="";
 		document.getElementById("memPw").focus();
 		document.getElementById("cmd").innerHTML="불일치!!";	
-		return true;
+		return false;
+	}
+}
+function allChk(){
+
+	pw=document.getElementById("memPw").value;
+	chkpw=document.getElementById("chkPw").value;
+	if(memId()==false){
+		alert("아이디는 필수항목 입니다.");
+	}else if(!pw){
+		alert("비밀번호는 필수항목 입니다.");
+	}else if(!chkpw){
+		alert("비밀번호 확인을 입력해주세요.");
+	}else{
+		fo.submit();
 	}
 	
-}
-function name(){
-	name=document.getElementById("name01").value;
-}
-
-function allChk(){
-	if(memId()==true){
-		alert("아이디를 입력해주세요");
-		document.getElementById("memId").focus();
-	}
-	else if(chk()==true){
-		alert("비밀번호를 입력해주세요")
-		document.getElementById("memPw").focus();
-	}
-	else{
-		
-	}
 }
 </script>
 </head>
 <body>
 <h1>계정 등록 페이지 입니다</h1>
-
-<input type="text"placeholder="아이디" id="memId"onclick="memId()"><font color="red">(*필수항목)</font><br> 
-<input type="text"placeholder="비밀번호"id="memPw"><font color="red">(*필수항목)</font><br>
+<form id="fo" action="C_Quiz03.html">
+<input type="text"placeholder="아이디"id="memId"name="id01"><font color="red">(*필수항목)</font><br> 
+<input type="text"placeholder="비밀번호"id="memPw"name="pwd01"><font color="red">(*필수항목)</font><br>
 <input type="text"placeholder="비밀번호확인"id="chkPw"onchange="chk()"><font id="cmd"></font> <br>
-<input type="text"placeholder="이름"id="name01"><br>
+<input type="text"placeholder="이름"id="name01"name="name01"><br>
 <hr>
-<input type="submit"value="등록"style="color: black "onclick="allChk()">
+<input type="button"value="등록"style="color: black "onclick="allChk()">
+</form>
+
 </body>
 </html>

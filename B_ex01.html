@@ -90,7 +90,7 @@ function printArr(item,index){
 	document.write("배열 데이터["+ index +"]:"+item+"<br>");	
 }
 kdata.forEach(printArr);
-//foreach문
+//foreach문 // 프린트하는 함수를 호출하여 forEach문으로 배열 데이터 출력하기
 document.write("<hr>")
 </script>
 
@@ -99,14 +99,15 @@ document.write("<hr>")
 <script type="text/javascript">
 var kdata=['서울','부산'];
 var p1=kdata.unshift('창주','세종');
+//unshift 배열의 앞에 아이템을 삭제한다 앞으로 추가된다. kdata = [ 청주, 세종, 서울, 부산 ] 순임
 document.write("데이터s:"+p1+"<br>");
 document.write("배열 데이터:"+kdata+"<p/>");
 var p2=kdata.shift();
 document.write("데이터:"+p2+"<br>")
 document.write("배열 데이터:"+kdata+"<p/>")
 document.write("<hr>")
-//shift 배열의 첫 번째 아이템을 제거한다
-//unshift 배열의 앞에 아이템을 추가한다
+//shift 배열의 첫 번째 아이템을 제거한다<->pop반대
+
 </script>
 
 <script type="text/javascript">
@@ -119,7 +120,7 @@ document.write("데이터:"+p2+"<br>");
 document.write("배열 데이터:"+kdata+"<p/>");
 document.write("<hr>")
 //push 뒤에 데이터 추가
-//pop 맨뒤에 있는 데이터를 삭제
+//pop 맨뒤에 있는 데이터를 삭제 (마지막 데이터를 가져온다.)
 </script>
 
 <script type="text/javascript">
@@ -132,6 +133,7 @@ document.write("부분 배열2:"+str2+"<p/>");
 document.write("부분 배열3:"+str3+"<p/>");
 document.write("<hr>")
 //~에서 부터 ~전 까지 데이터 출력
+// slice(시작 인덱스, 끝 다음 인덱스)
 
 </script>
 
@@ -159,6 +161,7 @@ document.write("조건 결과1:"+joindata1 +"</p>");
 document.write("조건 결과2:"+joindata2 +"</p>");
 document.write("조건 결과3:"+joindata3 +"</p>");
 //인덱스 사이사이 값을 추가함
+// join 괄호 안에 문자로 배열값이 이어져서 프린트된다.
 </script>
 
 
@@ -207,6 +210,7 @@ insertArr();//배열 데이터 생성 함수 호출
 var city=["seoul","Busan","Incheon"];
 city[3]=12345;
 city[4]=true;
+//추가로 값을 넣을 수 있다.
 function printArr(){
 	var i;
 	for(i=0;i<city.length;i++){

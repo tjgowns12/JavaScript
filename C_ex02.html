@@ -5,17 +5,23 @@
 <title>Insert title here</title>
 <script type="text/javascript">
 function myFocus(){document.getElementById('pw').focus();}
+//pw에 아이디에 focus가 됨
 function pwchk(){
 	inPut=document.getElementById("inPut").value;
 	document.getElementById("outPut").value=inPut;
 	document.getElementById("inPut").value="";
+//"inPut"에 있는 값을 inPut에 넣고  "outPut"에 값을 넣어준다 그리고 inPut에 들어가 있던 값을 없애준다  
 }
 
 </script>
 <script type="text/javascript">
 function myClick() {
-    alert("안녕하세요.\n환영합니다"); var result = confirm("처음 방문 입니까?");
+    alert("안녕하세요.\n환영합니다");
+    var result = confirm("처음 방문 입니까?");
     console.log(result)
+ //메세지창이 뜬다
+ //confirm--예true 아니오false 데이터가 result에 들어감 
+ //true면 result false면 else
     if(result){
         document.getElementById("myclick").innerHTML=
         										"처음 방문해 주셔서 감사합니다!!!"

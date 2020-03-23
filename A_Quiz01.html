@@ -10,19 +10,21 @@
 <script type="text/javascript">
 function display01(){
 	i--;
-	console.log("click")
-	document.getElementById("myImage").src="최근상품0"+i+".jpg";
-	if(i==1){
+	if(i==0){
 		i=8;
 	}
+	console.log("click")
+	document.getElementById("myImage").src="최근상품0"+i+".jpg";
+
 } 
 function display02(){
 	i++;
+	if(i==9){
+		i=1;
+	}
 	console.log("click")
 	document.getElementById("myImage").src="최근상품0"+i+".jpg";
-	if(i==8){
-		i=0;
-	}
+	
 }
 var i=1;
 </script>
