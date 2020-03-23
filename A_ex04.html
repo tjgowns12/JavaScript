@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+function add(){var sum=1; return sum;}
+//function add(x) {var sum=x+1;return sum;}
+//function add(x,y){var sum=x+y; return sum;}
+//function add(x,y,z){var sum=x+y+z; return sum;}
+
+document.write("함수 호줄 인자 없음 :"+add()+"<p/>");
+document.write("함수 호줄 인자 부족 :"+add(1)+"<p/>");
+document.write("함수 호줄 인자 없음 :"+add(2,3)+"<p/>");
+document.write("정상적인 함수 호출 :"+add(4,5,6)+"<p/>");
+document.write("7,8,9만 인자값으로 적용 :"+add(7,8,9,10)+"<p/>");
+
+
+function printMsg(name,age){
+	document.write("name:"+name+"<br>")
+	document.write("age:"+age+"<hr>")
+}
+
+function getGrade01(){
+	var kor=95;
+	return kor;
+}
+getKor=getGrade01();
+document.write("return:"+getKor+"<hr>");
+
+function getGrade(){
+	document.write("getGrade()함수 실행<br>");
+	//var=kor은 지역변수 지역변수는 메소드 내 에서만 사용 가능 .var가 없을시 전역변수 처럼 사용가능 하다.한번정도 호출을 해야함
+	//get grade가 docu및에 있으면 실행 안됨
+	let kor=95;
+	//let이라는 키워드는 변수를 딱 한번만 정의가 가능 하다 지역변수 (한번마 정의 하겠다 )
+	
+	document.write("전역 변수 kor01:"+kor +"<br>");
+	
+}
+//kor01에 있는 값을 사용함 (전역 변수)
+var kor01=100;
+getGrade();
+document.write("국어점수 :"+kor01+"<br>")
+
+</script>
+<body>
+
+<button type="button" onclick="printMsg('홍길동',21)">클릭 </button>
+<h3 onclick="printMsg('길동이',22)">클릭</h3>
+
+</body>
+</html>

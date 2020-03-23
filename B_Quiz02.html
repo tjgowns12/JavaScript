@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+
+img{width: 100px;height: 100px;}
+#div{background-color: red;width: 120px;height: 60px;position: fixed;right: 5px;
+		text-align: center;}
+#test{display: flex;flex-flow: column;position: fixed;right: 5px;top: 100px;}
+</style>
+<script>
+
+
+function add(st){
+
+	
+	img=document.createElement('img')	
+	img.setAttribute('src',st)
+	img.setAttribute('width',100)
+	img.setAttribute('height',100)
+	
+	document.getElementById('test').appendChild(img);
+	document.getElementById('div').style="background:green"
+	document.getElementById('div').innerHTML="최근 구경 <br>한상품"
+	i++;
+	
+}
+var i=1;
+
+</script>
+
+
+
+</head>
+
+<body>
+<h4 id="div">목록이<br>없습니다</h4>
+<div align="center" >
+<table border="1">
+<tr>
+<td><img onclick="add('최근상품01.jpg')" src="최근상품01.jpg"></td>
+<td><img onclick="add('최근상품02.jpg')" src="최근상품02.jpg"></td>
+<td><img onclick="add('최근상품03.jpg')" src="최근상품03.jpg"></td>
+<td><img onclick="add('최근상품04.jpg')" src="최근상품04.jpg"></td>
+</tr>
+<tr>
+<td><img onclick="add('최근상품05.jpg')" src="최근상품05.jpg"></td>
+<td><img onclick="add('최근상품06.jpg')" src="최근상품06.jpg"></td>
+<td><img onclick="add('최근상품07.jpg')" src="최근상품07.jpg"></td>
+<td><img onclick="add('최근상품08.jpg')" src="최근상품08.jpg"></td>
+</tr>
+<div id="test"align="right">
+</div>
+
+
+</table>
+</div>
+
+
+</body>
+</html>

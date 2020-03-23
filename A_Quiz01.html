@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#myImage{width:400px; height:400px;}
+</style>
+
+<script type="text/javascript">
+function display01(){
+	i--;
+	console.log("click")
+	document.getElementById("myImage").src="최근상품0"+i+".jpg";
+	if(i==1){
+		i=8;
+	}
+} 
+function display02(){
+	i++;
+	console.log("click")
+	document.getElementById("myImage").src="최근상품0"+i+".jpg";
+	if(i==8){
+		i=0;
+	}
+}
+var i=1;
+</script>
+
+</head>
+<body>
+<div align="center" style="background-color: pink;width: 400px">
+<img id="myImage"src="최근상품01.jpg"><br>
+
+<input type="button" value="이전" onclick="display01()">
+<input type="button" value="다음" onclick="display02()">
+
+</div>
+</body>
+</html>

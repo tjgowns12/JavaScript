@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+.di_img{width: 80px;height: 80px;}
+#myImage{width: 300px;height: 300px;}
+button{}
+</style>
+<script type="text/javascript">
+var i=1;
+function display01(){
+	console.log("click")
+	i--;
+	if(i==0){
+		i=8;
+	}
+	console.log("click")
+	document.getElementById("myImage").src="최근상품0"+i+".jpg";
+	
+} 
+function display02(){
+	console.log("click")
+	i++;
+	if(i==9){
+		i=1;
+	}
+	
+	console.log("click")
+	document.getElementById("myImage").src="최근상품0"+i+".jpg";
+}
+function sec(){
+	e=setInterval(display02,1000)
+}
+function end(){
+	clearInterval(e);
+}
+function start(){
+	e=setInterval(display02,1000)
+}
+</script>
+
+
+</head>
+<body onload="sec()">
+<div align="center">
+<div>
+<img class="di_img"src="왼쪽화살표.jpg"onclick="display01()">
+<img id="myImage" src="최근상품01.jpg"onmouseover=""onmouseout="">
+<img class="di_img"src="오른쪽화살표.jpg"onclick="display02()">
+</div>
+<button onclick="end()">종료</button>
+<button onclick="start()">시작</button>
+</div>
+
+</body>
+</html>

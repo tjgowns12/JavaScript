@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"src="test.js"></script>
+</head>
+<body>
+<button type="button" onclick="alert('클릭 발생')">클릭</button>
+<script type="text/javascript">
+var num=1;
+document.write("head 태그 내 실행 순서:"+num+"<br>")
+</script>
+<hr>
+<script type="text/javascript">
+var num; //변수 값이 없음
+var obj=null;//객체 변수 값이 없음
+document.write("1. 100 :"+typeof 100+"<br>")
+document.write("2. 10.5 :"+typeof 10.5+"<br>")
+document.write("3. 홍길동 :"+typeof "홍길동"+"<br>")
+document.write("4. true :"+typeof true+"<br>")
+document.write("5. [1,2,3] :"+typeof [1,2,3]+"<br>")
+document.write("6. {name:홍길동} :"+typeof {name:"홍길동"}+"<br>")
+document.write("7. num :"+typeof num+"<br>")
+document.write("8. obj :"+typeof obj+"<br>")
+
+var name=prompt('당신의 이름은?')
+document.write(+name)
+var age=prompt('당신의 나이는?')
+var add=prompt('당신의 주소는?')
+
+document.write("<table border='1'><tr><td>이름</td><td>나이</td><td>주소</td></tr>"
+				+"<tr><td>"+name+"</td><td>"+age+"</td><td>"+add+"</td></tr></table>")
+		
+</script>
+
+
+<!-- 헤드나 바디 사이에 작성해도 어디에 작성해도 상관없다 script사이에  변수에 앞에도 따로 타입을 적지않는다
+	document는 현재 페이지 write써주겠다  오류 발생시 브라우저f12 x버튼 클릭-->
+<!-- console.log()는 어떤 값이 나오는지 확인가능 -->
+
+</body>
+</html>

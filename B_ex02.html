@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function insertOpt(){
+	var insert=document.getElementById("insert");
+	var arr=["야구","축구","배구","족구"];
+	for(var i=0;i<arr.length;i++){
+		var opt=document.createElement("option");
+		opt.value=arr[i];opt.innerHTML=arr[i];insert.appendChild(opt);
+	}
+}
+</script>
+
+</head>
+
+<body onload="insertOpt()">
+<select id="insert"></select>
+
+
+<script type="text/javascript">
+var img;
+function add(){
+	img=document.createElement('img');
+	//img.src="최근상품01.jpg";img.width=100;
+	//img.height=122;document.body.appendChild(img);
+
+	img.setAttribute('src', '최근상품01.jpg');
+	img.setAttribute('width', 100);
+	img.setAttribute('height', 122);
+	//document.body.appendChild(img);
+	document.getElementById('test').appendChild(img);
+}
+function remove(){
+	//document.body.removeChild(img);}
+	document.getElementById('test').removeChild(img);
+	}
+</script>
+
+<hr>
+<p id="test">test</p>
+<a href="#" onclick="add()">[이미지 추가]</a>
+<a href="#" onclick="remove()">[이미지 삭제]</a>
+<!-- body.append 바디에다 추가를 하겠다는 뜻 -->
+
+</body>
+</html>
