@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+.wrap{padding: 10px;}
+#wrap01{display: none;}
+#wrap01.a{display:block; width: 100px;height: 100px;
+		margin-top: 100px;margin-left: 100px;}
+</style>
+
+
+</head>
+<script type="text/javascript">
+function but1(){
+	let wrap01 = document.getElementById("wrap01");
+	wrap01.setAttribute('class','a');
+	wrap01.style="background-color:yellow"
+	document.getElementById("h1").innerHTML="버튼1입니다"
+}
+function but2(){
+	let wrap01 = document.getElementById("wrap01");
+	wrap01.setAttribute('class','a');
+	wrap01.style="background-color:green"
+	document.getElementById("h1").innerHTML="버튼2입니다"
+}
+function but3(){
+	let wrap01 = document.getElementById("wrap01");
+	wrap01.setAttribute('class','a');
+	wrap01.style="background-color:pink"
+	document.getElementById("h1").innerHTML="버튼3입니다"
+}
+
+
+
+
+</script>
+
+<body>
+<div class="wrap">
+<input type="button" value="버튼 1"onclick="but1()">
+<input type="button" value="버튼 2"onclick="but2()">
+<input type="button" value="버튼 3"onclick="but3()" >
+<input type="button" value="자 동" onclick="auto()">
+<input type="button" value="지우기"onclick="erase()">
+</div>
+<div id="wrap01">
+<h1 id="h1"></h1>
+</div>
+
+</body>
+</html>
